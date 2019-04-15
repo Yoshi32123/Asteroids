@@ -1,0 +1,58 @@
+Name: Kyler McQuillan
+Section: 3, 8am tues/thurs
+
+Description: 
+    - This project was assigned in order to create and implement a working collision detection method.
+    - Collision detection is determined based on AABB collision, in which a 2D Box Collider is used for every sprite and takes specific values from each to find overlap if any.
+    - Every wave spawns 8 big asteroids which break down twice.
+    - There is an upgrade system in which the ship or bullet's sprite can be changed. Upgrading the ship increases acceleration and max speed. Upgrading the hull increases the ships durability. Upgrading the bullet first allows puncturing of asteroids and then screen wrap.
+    
+User responsibilities/functionality:
+    - Upon starting the program, 8 asteroids spawn randomly in close proximity to the edges of the screen. The ship spawns in the center.
+    - The ship has multiples controls listed:
+        up-arrow: move forward
+        left/right arrows: rotate the direction the ship is facing
+        space: fire lasers/bullets
+    - Upon landing a hit with a bullet on an asteroid, the asteroid breaks into 2 new, smaller asteroids that have a similar direction vector as the parent.
+    - On the side of the screen is the stats area. Different sections include:
+        a) CURRENT STATS
+            - Score, Space dust (currency), and Hull Integrity (health)
+        b) UPGRADES
+            - Displays cost of bullet, ship, and hull upgrades
+        c) PLAYER STATS
+            - Displays the players current bullet, ship, and hull loadout
+    - For Upgrading, the keys are listed next to the price in the GUI. "g" will upgrade the ship model, "h" will upgrade the ship hull (color scheme), and "b" will upgrade the bullet. Each needs the space dust shown in order to upgrade.
+    - If the ship is hit, it will turn blue indicating invincibility.
+    - Upon losing all health, the ship is destroyed using Destroy() and a GUI appears saying "You Died. Press 'Enter' to play again"
+    
+Description of Above and Beyond:
+    - For my above and beyond, I chose to implement an upgrade interface. The 3 areas of upgrade are the ship model, the ship hull, and the bullet. Each has 3 variants.
+    - For ship model, it changes the view of the ship sprite without affecting other properties. The attribute it upgrades is the speed of the ship. Specifically, the max speed and acceleration.
+    - For the ship hull, it changes the sprite to a different color scheme. Upgrading the hull increases the durability by halfing the damage dealt to the player.
+    - For bullet, it changes the sprite and changes the bullets properties. The first upgrade allows bullets to penetrate through asteroids instead of getting deleted upon collision. They are still deleted when hitting edge of screen though. The second upgrade allows bullets to also screen wrap until the timer expires.
+    
+Caveats or Known Issues
+    - Inside of the CollisionDetection script, there was an issue where my index was out of range for j and using debug.log I found out j was becoming -1 and not stopping at 0. I used a conditional checking that j was greater than or equal to 0 and it solved the issue.
+    
+Requirements not completed:
+    -none
+    
+Sources:
+    Ship Sprites:
+        There was 9 different ship sprites used as well as a trail sprite.
+    -Link: https://assetstore.unity.com/packages/2d/textures-materials/2d-spaceships-pack-1-86267
+    -Author: A.ART
+    
+    Asteroid Sprites:
+        There was 3 different sprites used. The red asteroid, brown, and grey.
+    -Link: https://forum.thegamecreators.com/thread/209786
+    -Author: Phaelax
+    
+    Bullets:
+        There was 3 bullet sprites used. A yellow, green, and cyan.
+    -Link: https://opengameart.org/content/lasers-and-beams
+    -Author: Rawdanitsu
+    
+Notes:
+    In this project, the best trait learned was working between scripts and getting variables from each other.  That was a big part of how I structured my code.
+        
