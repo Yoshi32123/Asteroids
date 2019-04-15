@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1342231067165126}
+  m_IsPrefabAsset: 1
+--- !u!1 &1342231067165126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4410871056412136}
+  - component: {fileID: 114936610054633766}
+  - component: {fileID: 114819406225808508}
+  - component: {fileID: 114103012729402274}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4410871056412136
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1342231067165126}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114103012729402274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1342231067165126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41362c20cdc98704bacf6cea7e58c112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  hullIntegrity: 100
+  spaceDust: 5000
+  userPrefab: {fileID: 0}
+  ship: {fileID: 0}
+  ships:
+  - {fileID: 21300000, guid: 7e2e5b7ad7a7e8348b441f24a2d3412b, type: 3}
+  - {fileID: 21300000, guid: 0283f40a43f114f47879a2165b5b1b8c, type: 3}
+  - {fileID: 21300000, guid: f0d2453542799404991972a4ba02a668, type: 3}
+  - {fileID: 21300000, guid: 9e3ce518dbff5444680703709bbc1824, type: 3}
+  - {fileID: 21300000, guid: 5490a4499197aeb42ab9a6e32489fc38, type: 3}
+  - {fileID: 21300000, guid: 5efd37e9948f23747b012921f1849571, type: 3}
+  - {fileID: 21300000, guid: 2860ad08d3478ab44ac33950e7b742bc, type: 3}
+  - {fileID: 21300000, guid: c548ac2249fe14d47a6033ca25c9d63c, type: 3}
+  - {fileID: 21300000, guid: 7f3c35280ac663b4e94f9b79d0a1a3aa, type: 3}
+  bullets:
+  - {fileID: 1952612462455172, guid: c7b2a3b3bdcec394a92d15ac4c1a54c8, type: 2}
+  - {fileID: 1744886387881542, guid: ea7ca0854a7351343babb9e1e51bb6c1, type: 2}
+  - {fileID: 1510679789969950, guid: 68212204e78393045bcbe684fd217fc8, type: 2}
+--- !u!114 &114819406225808508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1342231067165126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483aeb6f42a75a141a6db8c91e7b992e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroids: []
+  asteroidPrefabs:
+  - {fileID: 1971152611155186, guid: bef946236fa667542ba5ab006f631258, type: 2}
+  - {fileID: 1613678235735190, guid: 591b2d8b31bcef14c927d29d7858c0bd, type: 2}
+  - {fileID: 1182417310192678, guid: de7463153c802c546a04ed0137f4e331, type: 2}
+--- !u!114 &114936610054633766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1342231067165126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6d5b47cea5c7845a1c038abd474e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ship: {fileID: 0}
+  manager: {fileID: 1342231067165126}
+  asteroidSprites:
+  - {fileID: 21300000, guid: 2fa0d41ddf266644d9e7135078c47d7d, type: 3}
+  - {fileID: 21300000, guid: 053f1ea04d593a942ad39851bdf97111, type: 3}
+  - {fileID: 21300000, guid: d9152f87800bd4646ad66af1677b2b46, type: 3}
+  asteroid2:
+  - {fileID: 1530614189879992, guid: 77919ea5ed9bb7c458dd3279ffcb41bb, type: 2}
+  - {fileID: 1561737659837142, guid: c51f2405fc21cae4594806623bd715ba, type: 2}
+  - {fileID: 1510007336027796, guid: da3ab3631ed2084408e9ac27fcf9c8d0, type: 2}
+  asteroid3:
+  - {fileID: 1889043618686034, guid: 40d53c2df99d9234585014c35f4bb8d4, type: 2}
+  - {fileID: 1148809093649644, guid: ed05224d7cf81314e9b2fcba72e13b2e, type: 2}
+  - {fileID: 1998785535022522, guid: 10417698e9d6d3045a6609cef2261a3e, type: 2}
+  asteroidPrefab: 0
+  ShipDamageDecreaser: 0000
+  damage: 0
+  plasmaBullet: 1
